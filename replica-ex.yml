@@ -23,3 +23,8 @@ spec:
         - name: nginx-container
           image: nginx:alpine
 
+# kubectl create -f x.yml
+# kubectl get replicaset
+# kubectl delete replicaset rep-ex
+# kubectl scale --replicas=n -f x.yml (without modifing)
+# kubectl replace -f x.yml (modifing the config file)
