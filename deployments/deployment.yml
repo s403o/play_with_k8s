@@ -20,3 +20,8 @@ spec:
       containers:
         - name: nginx
           image: nginx:alpine
+
+# Deployments – Update and Rollback #
+# update> kubectl apply -f deployment.yml || set image deployment/deployment-app nginx=nginx:newversion
+# status> kubectl rollout status || history deployment/deployment-app
+# Rollback> kubectl rollout undo deployment/deployment-app
