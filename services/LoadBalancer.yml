@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-app
+
+spec:
+  type: LoadBalancer
+  ports:
+    - targetPort: 80
+      port: 80
+      nodePort: 30001 # front-end app
+  
