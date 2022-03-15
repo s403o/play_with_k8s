@@ -1,0 +1,14 @@
+apiVersion: v1
+kind:  Pod
+metadata:
+  name: worker-app-pod
+  labels:
+    name: worker-app-pod
+    app: voting-app
+
+spec:
+  containers:
+    - name: worker-app
+      image: kodekloud/examplevotingapp_worker:v1
+      # port:
+      #   - containerPort: 80 no services listening
