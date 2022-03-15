@@ -9,7 +9,7 @@ metadata:
 spec:
   containers:
     - name: postgres
-      image: postgres
+      image: postgres:9.4
       ports:
         - containerPort: 5432
       env: # used by worker & result pods
@@ -17,3 +17,5 @@ spec:
           value: "postgres"
         - name: POSTGRES_PASSWORD
           value: "postgres"
+        - name: POSTGRES_HOST_AUTH_METHOD
+          value: trust
